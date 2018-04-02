@@ -1,19 +1,13 @@
 package com.stanusch.omnibot.rest.repository.model.id;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Embeddable;
 import java.io.Serializable;
 
-@MappedSuperclass
-@EqualsAndHashCode
-@Getter
-@Setter
-@ToString
+@Embeddable
+@Data
 public class EntityId implements Serializable {
 
     @Column(name = "ido", nullable = false)
