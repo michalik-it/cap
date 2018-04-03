@@ -4,7 +4,7 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class FactService {
-  public API = '//localhost:8080/cap';
+  public API = '//localhost:8080/api';
   public FACT_API = this.API + '/facts';
 
   constructor(private http: HttpClient) {

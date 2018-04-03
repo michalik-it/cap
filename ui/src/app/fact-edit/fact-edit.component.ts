@@ -26,7 +26,7 @@ export class FactEditComponent implements OnInit, OnDestroy {
       const botId = params['botId'];
       if (id) {
         this.factService.get(id, botId).subscribe((fact: any) => {
-          console.log(fact)
+          console.log(fact);
           if (fact) {
             this.fact = fact;
             this.fact.href = fact._links.self.href;
