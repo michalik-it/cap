@@ -1,17 +1,14 @@
 package com.stanusch.omnibot.rest.repository.model;
 
-import com.stanusch.omnibot.rest.repository.model.id.EntityId;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
 @Entity
 @Data
-public class Fact {
-    @EmbeddedId
-    private EntityId id;
-
+@EqualsAndHashCode(callSuper = true)
+public class Fact extends BasicEntity {
     private String name;
     private String content;
 }
