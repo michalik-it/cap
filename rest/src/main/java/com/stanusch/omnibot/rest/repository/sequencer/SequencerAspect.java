@@ -28,7 +28,7 @@ public class SequencerAspect {
     }
 
     @Around("repositoryInterfaceSaveMethods()")
-    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object generateId(ProceedingJoinPoint joinPoint) throws Throwable {
         Object[] args = joinPoint.getArgs();
         Stream.of(args).forEach(
                 arg -> {
