@@ -23,7 +23,9 @@ public class SequencerAspect {
     }
 
     @Pointcut("execution(* com.stanusch.omnibot.rest.repository.*Repository.save*(Object))")
-    public void repositoryInterfaceSaveMethods() { }
+    public void repositoryInterfaceSaveMethods() {
+        //Method should be empty, this is how we define pointcuts in spring AOP
+    }
 
     @Around("repositoryInterfaceSaveMethods()")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {

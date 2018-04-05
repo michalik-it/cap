@@ -1,5 +1,6 @@
 package com.stanusch.omnibot.rest.repository.sequencer;
 
+import com.stanusch.omnibot.rest.exception.SequenceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +27,7 @@ public class SequencerTool {
         String seqName = this.getString(simpleName.toLowerCase());
         if (seqName == null) {
             log.error("Brak zdefiniowanego sequencera {} w {}",simpleName, RESOURCE_BUNDLE.getBaseBundleName());
-            throw new RuntimeException("Brak zdefiniowanego sequencera " + simpleName + " w " + RESOURCE_BUNDLE.getBaseBundleName());
+            throw new SequenceNotFoundException(simpleName, "Brak zdefiniowanego sequencera " + simpleName + " w " + RESOURCE_BUNDLE.getBaseBundleName());
         } else {
             String select = String.format(SELECT_NEXTVAL_TEMPLATE, seqName);
             Query nativeQuery = entityManager.createNativeQuery(select);
