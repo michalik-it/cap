@@ -25,6 +25,7 @@
         <spock-core.version>1.0-groovy-2.4</spock-core.version>
         <postgresql.version>42.2.2</postgresql.version>
         <springfox.version>2.8.0</springfox.version>
+        <cglib-nodep.version>3.2.6</cglib-nodep.version>
     </properties>
 
     <dependencies>
@@ -94,6 +95,12 @@
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <version>${groovy-all.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>${cglib-nodep.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
