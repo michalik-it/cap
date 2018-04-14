@@ -21,6 +21,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <groovy-all.version>2.4.7</groovy-all.version>
         <spock-core.version>1.0-groovy-2.4</spock-core.version>
         <postgresql.version>42.2.2</postgresql.version>
