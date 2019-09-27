@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui-new';
+  Indiastate = [
+    'Rajasthan',
+    'UP',
+    'Mp',
+    'Delhi',
+    'Goa',
+    'Gurjat',
+    'Punjab'
+  ];
+  Ausstate = [
+
+    'New South Wales',
+    'Queensland',
+    'South Australia',
+    'Tasmania'
+  ];
+  Slstate = [
+    'Kandy',
+    'Galle',
+    'Kegalle',
+    'Mannar'
+  ];
 }
