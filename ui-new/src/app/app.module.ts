@@ -10,6 +10,7 @@ import {AccordionModule} from 'primeng/components/accordion/accordion';
 import {TableModule} from 'primeng/table';
 import {BooksComponent} from './components/books/books.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
 
@@ -26,7 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
     PanelModule,
     ButtonModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
 
   providers: [],
